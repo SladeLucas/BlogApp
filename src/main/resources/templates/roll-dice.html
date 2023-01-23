@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Dice Roll</title>
+</head>
+<body>
+<h1>Number Guesser</h1>
+<p>guess a number between 1 and 6.</p>
+<p>You guessed: <span th:text="${guess}"></span></p>
+<p>The number: <span th:text="${randNum}"></span></p>
+
+<div th:if="${match}">
+  <p>You guessed correctly.</p>
+</div>
+
+<div th:if="${!match}">
+  <p>Your guess was incorrect.</p>
+</div>
+</body>
+</html>
